@@ -1,0 +1,6 @@
+framework module LinkerLabel {
+  umbrella header "LinkerLabel-umbrella.h"
+
+  export *
+  module * { export * }
+}
