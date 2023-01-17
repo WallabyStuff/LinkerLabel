@@ -35,8 +35,17 @@ class ViewController: UIViewController {
   }
   
   private func setupLinkerLabel() {
+    // Make your own appearance through LinkerAppearance
+    let appearance = LinkerAppearance()
+    appearance.foregroundColor = .systemTeal
+    appearance.underlineColor = .systemTeal
+    appearance.font = UIFont.systemFont(
+      ofSize: UIFont.systemFontSize,
+      weight: .bold)
+    linkerLabel.linkAppearance = appearance
+    
+    linkerLabel.decorateLink(.url)
     linkerLabel.delegate = self
-    linkerLabel.decorateLink(.email)
   }
 }
 
