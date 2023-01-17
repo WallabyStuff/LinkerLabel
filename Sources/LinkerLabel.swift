@@ -39,14 +39,15 @@ open class LinkerLabel: UILabel {
   // MARK: - Properties
   
   open var delegate: LinkerLabelDelegate?
-  let linkAttributes: [NSAttributedStringKey: Any] = [
-    .foregroundColor: UIColor.blue,
-    .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
-    .underlineColor: UIColor.blue,
-  ]
+  open var linkAppearance = LinkerAppearance() {
+    didSet {
+      remakeDecorates()
+    }
+  }
   private var attributedString: NSMutableAttributedString?
   private var linkTextPositions = [LinkTextPosition]()
   private var linkType: LinkType?
+  private var originalAttributedText: NSAttributedString?
   
   
   // MARK: - Initializers
@@ -65,8 +66,13 @@ open class LinkerLabel: UILabel {
   // MARK: - Setups
   
   private func setup() {
+    setupData()
     setupView()
     setupGesture()
+  }
+  
+  private func setupData() {
+    originalAttributedText = attributedText
   }
   
   private func setupView() {
@@ -84,6 +90,7 @@ open class LinkerLabel: UILabel {
   open func decorateLink(_ type: LinkType) {
     self.linkType = type
     guard let text = text else { return }
+    linkTextPositions.removeAll()
     
     do {
       let pattern = type.regex
@@ -92,11 +99,13 @@ open class LinkerLabel: UILabel {
       matches.forEach { match in
         let range = match.range
         
-        appendLinkPosition(range)
-        
         attributedString = NSMutableAttributedString(string: text)
-        attributedString?.addAttributes(linkAttributes, range: range)
-        self.attributedText = attributedString
+        linkAppearance.allAttributes().forEach { attribute in
+          attributedString?.addAttributes(attribute, range: range)
+        }
+        
+        appendLinkPosition(range)
+        attributedText = attributedString
       }
     } catch {
       print("Log: wrong regex pattern")
@@ -115,12 +124,12 @@ open class LinkerLabel: UILabel {
   
   private func getSubTextRect(_ range: NSRange) -> CGRect? {
     guard let attributedText = attributedText else { return nil }
-    
     let layoutManager = NSLayoutManager()
+    
     let textStorage = NSTextStorage(attributedString: attributedText)
     textStorage.addLayoutManager(layoutManager)
     
-    let textContainer = NSTextContainer(size: intrinsicContentSize)
+    let textContainer = NSTextContainer(size: bounds.size)
     textContainer.lineFragmentPadding = 0
     layoutManager.addTextContainer(textContainer)
     
@@ -130,12 +139,19 @@ open class LinkerLabel: UILabel {
       actualGlyphRange: &glyphRange
     )
     
-    let bound = layoutManager.boundingRect(
+    let bounds = layoutManager.boundingRect(
       forGlyphRange: glyphRange,
       in: textContainer
     )
-
-    return bound
+    
+    return bounds
+  }
+  
+  private func remakeDecorates() {
+    attributedText = originalAttributedText
+    if let linkType = linkType {
+      decorateLink(linkType)
+    }
   }
   
   @objc

@@ -13,6 +13,7 @@
 		5A6F639A76406FE007CAE9393430E7AA /* Pods-LinkerLabel_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FEE56ECE501BCD1599820A6143DC83C /* Pods-LinkerLabel_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		631EB669FF13927D0645807ECF251F33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		66CD53CFF80B7BEFB6852147B42071CC /* Pods-LinkerLabel_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 94F347F63EAAF510DE96567F117232F8 /* Pods-LinkerLabel_Tests-dummy.m */; };
+		8E0A2BDA29763C8900817F2E /* LinkerAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0A2BD929763C8900817F2E /* LinkerAppearance.swift */; };
 		92C197EA162FA033B34F203854E39C6D /* LinkerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4789B0612B0C613B25B2677FE34B632 /* LinkerLabel.swift */; };
 		EAF6C663D1693C780A71EC98AE65A305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		F009409441D2A000775D33286FDA5CFF /* Pods-LinkerLabel_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FF085E0A48034288BCEF147796F3D515 /* Pods-LinkerLabel_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -54,6 +55,7 @@
 		78F5319B0EE625FBE5284AB89DB0F3E5 /* Pods-LinkerLabel_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-LinkerLabel_Example.modulemap"; sourceTree = "<group>"; };
 		7A42441753F7E65F427D736FC7D5F6AF /* LinkerLabel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinkerLabel.release.xcconfig; sourceTree = "<group>"; };
 		7D61EFA309E8853E7AC63175D8B45CEA /* Pods-LinkerLabel_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LinkerLabel_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8E0A2BD929763C8900817F2E /* LinkerAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LinkerAppearance.swift; path = Sources/LinkerAppearance.swift; sourceTree = "<group>"; };
 		8F60231225117F01D9060B3FBEDC16DE /* LinkerLabel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinkerLabel.debug.xcconfig; sourceTree = "<group>"; };
 		903BB4B2772B6094688A862AB83CBC33 /* Pods-LinkerLabel_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LinkerLabel_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		94F347F63EAAF510DE96567F117232F8 /* Pods-LinkerLabel_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LinkerLabel_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				F4789B0612B0C613B25B2677FE34B632 /* LinkerLabel.swift */,
+				8E0A2BD929763C8900817F2E /* LinkerAppearance.swift */,
 				366A5F42E41060B0085C804AE230775E /* Pod */,
 				CA28A781E01EF23F9497486E826C9418 /* Support Files */,
 			);
@@ -369,6 +372,7 @@
 			files = (
 				92C197EA162FA033B34F203854E39C6D /* LinkerLabel.swift in Sources */,
 				517655210E7077C8C6254E328DD48312 /* LinkerLabel-dummy.m in Sources */,
+				8E0A2BDA29763C8900817F2E /* LinkerAppearance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
