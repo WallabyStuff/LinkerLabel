@@ -37,7 +37,7 @@ open class LinkerAppearance {
     
     if isUnderlined {
       let underlineAttribute: [NSAttributedString.Key: Any] = [
-        .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
+        .underlineStyle: NSUnderlineStyle.single.rawValue,
         .underlineColor: underlineColor
       ]
       attributes.append(underlineAttribute)
