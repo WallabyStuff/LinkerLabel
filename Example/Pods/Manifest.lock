@@ -1,5 +1,5 @@
 PODS:
-  - LinkerLabel (0.1.0)
+  - LinkerLabel (0.1.1)
 
 DEPENDENCIES:
   - LinkerLabel (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LinkerLabel: 84d2537657542fc1c0a6ec78abc2eaeb21e38562
+  LinkerLabel: 04e47e70442b3c662040834c567bbe68800fb311
 
 PODFILE CHECKSUM: f724183106c95e8cecd92d544dc68fd2b2465ab7
 
