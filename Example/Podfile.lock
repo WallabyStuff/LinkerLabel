@@ -1,0 +1,16 @@
+PODS:
+  - LinkerLabel (0.1.1)
+
+DEPENDENCIES:
+  - LinkerLabel (from `../`)
+
+EXTERNAL SOURCES:
+  LinkerLabel:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LinkerLabel: 04e47e70442b3c662040834c567bbe68800fb311
+
+PODFILE CHECKSUM: f724183106c95e8cecd92d544dc68fd2b2465ab7
+
+COCOAPODS: 1.11.3

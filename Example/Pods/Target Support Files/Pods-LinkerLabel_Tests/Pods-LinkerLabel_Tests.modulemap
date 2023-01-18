@@ -1,0 +1,6 @@
+framework module Pods_LinkerLabel_Tests {
+  umbrella header "Pods-LinkerLabel_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

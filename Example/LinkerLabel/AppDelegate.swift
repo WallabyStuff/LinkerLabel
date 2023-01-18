@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  LinkerLabel
 //
-//  Created by SunneyG on 01/15/2023.
-//  Copyright (c) 2023 SunneyG. All rights reserved.
+//  Created by Wallaby on 01/15/2023.
+//  Copyright (c) 2023 Wallaby. All rights reserved.
 //
 
 import UIKit
