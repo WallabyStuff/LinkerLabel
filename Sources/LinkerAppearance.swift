@@ -26,17 +26,17 @@ open class LinkerAppearance {
   
   // MARK: - Methods
   
-  internal func allAttributes() -> [[NSAttributedStringKey: Any]] {
-    var attributes = [[NSAttributedStringKey: Any]]()
+  internal func allAttributes() -> [[NSAttributedString.Key: Any]] {
+    var attributes = [[NSAttributedString.Key: Any]]()
     
-    let defaultAttributes: [NSAttributedStringKey: Any] = [
+    let defaultAttributes: [NSAttributedString.Key: Any] = [
       .foregroundColor: foregroundColor,
       .backgroundColor: backgroundColor
     ]
     attributes.append(defaultAttributes)
     
     if isUnderlined {
-      let underlineAttribute: [NSAttributedStringKey: Any] = [
+      let underlineAttribute: [NSAttributedString.Key: Any] = [
         .underlineStyle: NSUnderlineStyle.styleSingle.rawValue,
         .underlineColor: underlineColor
       ]
@@ -44,7 +44,7 @@ open class LinkerAppearance {
     }
     
     if let font = font {
-      let fontAttribute: [NSAttributedStringKey: Any] = [
+      let fontAttribute: [NSAttributedString.Key: Any] = [
         .font: font
       ]
       attributes.append(fontAttribute)
